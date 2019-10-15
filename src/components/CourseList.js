@@ -20,6 +20,10 @@ state = {
   searchString: ''
 }
 
+// this part is necessary to see the cards
+// why?
+// The constructor for a React component... 
+// is called before it is mounted
 constructor() {
   super()
   this.getCourses()
