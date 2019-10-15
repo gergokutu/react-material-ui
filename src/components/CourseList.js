@@ -50,7 +50,27 @@ onSearchInputChange = (event) => {
 
   render() {
     return (
-      <Course />
+      <div>
+        {this.state.courses ? (
+          <div>
+            <TextField style={{padding: 24}}
+              id="searchInput"
+              placeholder="Search for courses"
+              margin="normal"
+              onChange={this.onSearchInputChange}
+            />
+            <Grid container spacing={24} style={{padding: 24}}>
+              {this.state.courses.map(currentCourse => (
+                // xs » applied for extra small screen sizes
+                // material-ui...
+                <Grid item xs={12} sm={6} lg={4} xl={3}>
+                  <Course course={currentCourse} />
+                </Grid>
+              ))}
+            </Grid>
+          </div>
+        ) : 'No courses found' }
+      </div>
     )
   }
 }
