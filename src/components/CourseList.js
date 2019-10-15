@@ -59,11 +59,11 @@ onSearchInputChange = (event) => {
               margin="normal"
               onChange={this.onSearchInputChange}
             />
-            <Grid container spacing={24} style={{padding: 24}}>
+            <Grid container spacing={10} style={{padding: 24}}>
               {this.state.courses.map(currentCourse => (
                 // xs » applied for extra small screen sizes
                 // material-ui...
-                <Grid item xs={12} sm={6} lg={4} xl={3}>
+                <Grid item xs={12} sm={6} lg={4} xl={3} key={currentCourse.fields.title}>
                   <Course course={currentCourse} />
                 </Grid>
               ))}

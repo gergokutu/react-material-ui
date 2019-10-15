@@ -14,11 +14,11 @@ const Course = (props) => {
       { props.course ? (
         <Card>
           <CardMedia style={{height: 0, paddingTop: '56.25%'}}
-            image={props.course.fields.courseImagee.fields.url}
+            image={props.course.fields.courseImage.fields.file.url}
             title={props.course.fields.title}
           />
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h2">
+            <Typography gutterBottom variant="h5" component="h5">
               {props.course.fields.title}
             </Typography>
             <Typography component="p">
