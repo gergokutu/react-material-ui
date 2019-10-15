@@ -38,6 +38,14 @@ getCourses = () => {
     console.log(error)
   })
 }
+// callback for initiate freetext searches...
+onSearchInputChange = (event) => {
+  if (event.target.value) {
+    this.setState({searchString: event.target.value})
+  } else {
+    this.setState({searchString: ''})
+  }
+}
 
   render() {
     return (
