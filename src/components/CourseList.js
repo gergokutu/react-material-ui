@@ -45,6 +45,7 @@ onSearchInputChange = (event) => {
   } else {
     this.setState({searchString: ''})
   }
+  this.getCourses()
 }
 
   render() {
